@@ -1,0 +1,5 @@
+SELECT tickets.* , devices.type , devices.reference , states.state_name, users.username 
+            FROM tickets 
+            LEFT JOIN devices ON tickets.id_device = devices.id 
+            LEFT JOIN states ON tickets.id_state = states.id
+            LEFT JOIN users ON tickets.id_user = users.id"
